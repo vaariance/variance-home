@@ -43,7 +43,7 @@
   }
 
   .site-nav__list {
-    @apply flex items-center gap-4;
+    @apply flex items-center gap-6;
   }
 
   .site-nav__link {
