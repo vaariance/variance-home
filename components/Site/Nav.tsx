@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import { GithubIcon, BookOpenIcon } from "lucide-react";
 const SiteNav = () => {
   const links = [
     {
@@ -26,11 +26,15 @@ const SiteNav = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {link.text}
+                {link.text === "GitHub" && <GithubIcon className="icon" />}
+                <span className="text">{link.text}</span>
               </a>
             ) : (
               <Link className="site-nav__link" href={link.href}>
-                {link.text}
+                {link.text === "Documentation" && (
+                  <BookOpenIcon className="icon" />
+                )}
+                <span className="text">{link.text}</span>
               </Link>
             )}
           </li>

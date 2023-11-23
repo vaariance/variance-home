@@ -1,12 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
+import SiteHero from "@/components/Site/Hero";
 
 const Home = () => {
   return (
     <main>
-      <section className="site-section site-hero">
-        <div className="wrapper"></div>
-      </section>
+      <SiteHero />
     </main>
   );
 };
