@@ -11,9 +11,10 @@ export const metadata: Metadata = {
     title: "Vaariance",
     description:
       "Open source account abstraction SDK written in dart that empowers developers to create mobile-native Web3 applications with ease.",
-    url: "https://vaariance.vercel.app",
+    url: "https://variance-home.vercel.app",
     siteName: "Vaariance",
   },
+  metadataBase: new URL("https://variance-home.vercel.app"), // Fix the assignment here
 };
 
 export default function RootLayout({
