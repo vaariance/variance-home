@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Mulish:wght@400;700;900;1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,12 +18,18 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  body {
+    @apply bg-black text-slate-100;
+  }
+}
+
+@layer components {
+  .site-section {
+    @apply w-full p-4 py-12;
+  }
+
+  .site-section > .wrapper {
+    @apply mx-auto max-w-7xl;
+  }
 }
