@@ -42,6 +42,10 @@
     @apply mx-auto max-w-6xl;
   }
 
+  .site-section__caption {
+    @apply text-2xl lg:text-4xl font-bold;
+  }
+
   .site-nav__list {
     @apply flex items-center gap-6;
   }
