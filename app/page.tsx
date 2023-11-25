@@ -2,6 +2,7 @@ import BenefitsSection from "@/components/BenefitsSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import SiteHero from "@/components/Site/Hero";
 import StepForwardSection from "@/components/StepForwardSection";
+import WhySection from "@/components/WhySection";
 import Image from "next/image";
 
 const Home = () => {
@@ -57,6 +58,7 @@ const Home = () => {
       <StepForwardSection />
       <BenefitsSection benefitList={benefitList} />
       <FeaturesSection featureList={featureList} />
+      <WhySection />
     </main>
   );
 };
