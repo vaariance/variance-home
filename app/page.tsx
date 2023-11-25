@@ -2,7 +2,7 @@ import SiteHero from "@/components/Site/Hero";
 import Image from "next/image";
 
 const Home = () => {
-  const featureList = [
+  const benefitList = [
     {
       id: "smart-choice",
       img: "/img/smart-choice.svg",
@@ -28,40 +28,46 @@ const Home = () => {
   return (
     <main>
       <SiteHero />
-      <section className="site-section">
+      <section className="site-section step-forward-section">
+        <div className="wrapper ">
+          {/* <header className="site-section__header">
+            <div className="wrapper"> */}
+          <h2 className="site-section__caption lg:mb-32 lg:max-w-sm">
+            A step forward migrating web3 to mobile
+          </h2>
+          <div className="text-wrapper gap-12 lg:flex">
+            <p className="site-section__subcaption">
+              Open source account abstraction SDK written in dart that empowers
+              developers to create mobile-native Web3 applications with ease.
+            </p>
+            <br />
+            <p className="site-section__subcaption">
+              Enhancing the overall user experience and opening up new
+              possibilities for the Web3 ecosystem on mobile platforms.
+            </p>
+          </div>
+        </div>
+        {/* </header> */}
+        {/* </div> */}
+      </section>
+      <section className="site-section benefits-section">
         <div className="wrapper">
-          <header className="site-section__header">
-            <div className="wrapper">
-              <h2 className="site-section__caption">
-                A step forward migrating web3 to mobile
-              </h2>
-              <p className="site-section__subcaption">
-                Open source account abstraction SDK written in dart that
-                empowers developers to create mobile-native Web3 applications
-                with ease.
-              </p>
-              <p className="site-section__subcaption">
-                Enhancing the overall user experience and opening up new
-                possibilities for the Web3 ecosystem on mobile platforms.
-              </p>
-            </div>
-          </header>
-          <ul className="feature-list">
-            {featureList.map((feature) => (
-              <li className="feature-list__item" key={feature.id}>
-                <figure className="feature-list__item-img-cont">
+          <ul className="benefit-list">
+            {benefitList.map((benefit) => (
+              <li className="benefit-list__item" key={benefit.id}>
+                <figure className="benefit-list__item-img-cont img-cont">
                   <Image
-                    src={feature.img}
-                    alt={feature.title}
-                    className="feature-list__item-img"
+                    src={benefit.img}
+                    alt={benefit.title}
+                    className="benefit-list__item-img"
                     width={64}
                     height={64}
                   />
                 </figure>
-                <div className="feature-list__item-content">
-                  <h3 className="feature-list__item-title">{feature.title}</h3>
-                  <p className="feature-list__item-description">
-                    {feature.description}
+                <div className="benefit-list__item-content">
+                  <h3 className="benefit-list__item-title">{benefit.title}</h3>
+                  <p className="benefit-list__item-description">
+                    {benefit.description}
                   </p>
                 </div>
               </li>

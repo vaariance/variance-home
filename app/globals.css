@@ -34,16 +34,28 @@
     @apply h-6 w-6 text-gray-200;
   }
 
+  .img-cont > img {
+    @apply h-full w-full;
+  }
+
   .site-section {
-    @apply w-full p-4 py-12;
+    @apply w-full p-4 py-32;
   }
 
   .site-section > .wrapper {
     @apply mx-auto max-w-6xl;
   }
 
+  .site-section__header {
+    @apply mb-24;
+  }
+
   .site-section__caption {
-    @apply text-2xl lg:text-4xl font-bold;
+    @apply mb-8 text-4xl font-bold lg:text-5xl;
+  }
+
+  .site-section__subcaption {
+    @apply text-lg lg:text-2xl;
   }
 
   .site-nav__list {
@@ -68,10 +80,11 @@
 
   .site-hero {
     @apply relative bg-[url("/img/bg-1.svg")] bg-cover bg-center bg-no-repeat;
+    /* background-position: -24rem; */
   }
 
   .site-hero > .wrapper {
-    @apply flex min-h-screen flex-col items-center justify-center text-center;
+    @apply flex h-screen max-h-[80rem] flex-col items-center justify-center text-center;
   }
 
   .site-hero .site-section__header,
@@ -96,7 +109,7 @@
   }
 
   .site-hero__elements:nth-of-type(1) > * {
-    @apply font-bebasbook w-full pt-2 text-2xl font-light uppercase tracking-widest lg:w-auto lg:-rotate-90;
+    @apply w-full pt-2 font-bebasbook text-2xl font-light uppercase tracking-widest lg:w-auto lg:-rotate-90;
   }
   .site-hero__elements:nth-of-type(1) > *::after {
     @apply mt-2 block h-[0.5px] w-full bg-gray-100/60 lg:hidden;
@@ -104,6 +117,40 @@
   }
 
   .site-hero__elements:nth-of-type(2) {
-    @apply font-bebas absolute bottom-28 left-1/2 flex w-full max-w-md -translate-x-1/2 transform flex-col items-center gap-2 px-8 text-lg uppercase tracking-widest;
+    @apply absolute bottom-52 left-1/2 flex w-full max-w-md -translate-x-1/2 transform flex-col items-center gap-2 px-8 font-bebas text-lg uppercase tracking-widest;
   }
+}
+
+.step-forward-section {
+  @apply relative bg-cover bg-center bg-no-repeat lg:bg-[url("/img/bg-2.svg")] lg:py-72;
+  /* background-position: -24rem; */
+}
+
+.benefits-section {
+  @apply relative bg-cover bg-center bg-no-repeat lg:bg-[url("/img/bg-3.svg")] lg:py-72;
+  /* background-position: -24rem; */
+}
+
+.benefit-list {
+  @apply flex flex-col gap-24 lg:max-w-2xl;
+}
+
+.benefit-list__item {
+  @apply flex flex-col items-start gap-4 lg:flex-row lg:gap-24;
+}
+
+.benefit-list__item-img-cont {
+  @apply flex-shrink-0 lg:w-24;
+}
+
+.benefit-list__item-content {
+  @apply flex flex-col gap-2;
+}
+
+.benefit-list__item-title {
+  @apply text-2xl font-bold lg:text-3xl;
+}
+
+.benefit-list__item-description {
+  @apply text-lg lg:text-2xl;
 }
