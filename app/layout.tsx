@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SiteHeader from "@/components/Site/Header";
+import SiteFooter from "@/components/Site/Footer";
 
 export const metadata: Metadata = {
   title: "Vaariance",
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body>
         <SiteHeader />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

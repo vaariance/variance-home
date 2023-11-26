@@ -28,7 +28,7 @@ const FeaturesSection = ({
                     transform="rotate(-0.0734336 81.1025 81.1025)"
                     fill="#5E5E5E"
                     stroke="white"
-                    stroke-dasharray="10 10"
+                    strokeDasharray="10 10"
                   />
                 </svg>
               </div>
@@ -44,7 +44,7 @@ const FeaturesSection = ({
                   <path
                     d="M0.5 0.5V191.5"
                     stroke="white"
-                    stroke-dasharray="10 10"
+                    strokeDasharray="10 10"
                   />
                 </svg>
                 <p>{feature.description[1]}</p>

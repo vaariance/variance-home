@@ -5,7 +5,6 @@ import RoadmapSection from "@/components/RoadmapSection";
 import SiteHero from "@/components/Site/Hero";
 import StepForwardSection from "@/components/StepForwardSection";
 import WhySection from "@/components/WhySection";
-import Image from "next/image";
 
 const Home = () => {
   const benefitList = [
