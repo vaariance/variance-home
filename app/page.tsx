@@ -1,5 +1,6 @@
 import BenefitsSection from "@/components/BenefitsSection";
 import FeaturesSection from "@/components/FeaturesSection";
+import RoadmapSection from "@/components/RoadmapSection";
 import SiteHero from "@/components/Site/Hero";
 import StepForwardSection from "@/components/StepForwardSection";
 import WhySection from "@/components/WhySection";
@@ -52,6 +53,48 @@ const Home = () => {
       ],
     },
   ];
+
+  const roadmapList = [
+    {
+      title: "Wallet Signers",
+      id: "wallet-signers",
+      points: [
+        "Allowing users to seamlessly switch to hardware-based signatures when needed.",
+        "Streamline key management for users relying on EOA (Externally Owned Account) signers.",
+        "Interoperate with both passkeys signers and EOA (Externally Owned Account) signers",
+      ],
+      status: "completed",
+    },
+    {
+      title: "4337 Providers",
+      id: "4337-providers",
+      points: [
+        "Abstract complexities associated with bundlers, Entrypoint, and paymasters.",
+        "Make integration of smart accounts straightforward with just a few lines of code.",
+        "Empower developers to build user operations in Dart seamlessly.",
+      ],
+      status: "completed",
+    },
+    {
+      title: "Safe Core Utils",
+      id: "safe-core-utils",
+      points: [
+        "Safe helpers that enable developers to work with Safe modular accounts.",
+        "Compatibility with wallet provider.",
+        "Gelato as an alternative to 4337 via alt mempool.",
+      ],
+      status: "in-progress",
+    },
+    {
+      title: "Add-ons",
+      id: "add-ons",
+      points: [
+        "Enable smart wallet developers to provide users with a streamlined means of connecting their wallets to Dapps on the web.",
+        "Native Cross-Chain support with CCIP interface.",
+      ],
+      status: "pending",
+    },
+  ];
   return (
     <main>
       <SiteHero />
@@ -59,6 +102,7 @@ const Home = () => {
       <BenefitsSection benefitList={benefitList} />
       <FeaturesSection featureList={featureList} />
       <WhySection />
+      <RoadmapSection roadmapList={roadmapList} />
     </main>
   );
 };

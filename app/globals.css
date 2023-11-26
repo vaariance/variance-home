@@ -51,7 +51,7 @@
   }
 
   .site-section__caption {
-    @apply mb-8 text-4xl font-bold lg:text-5xl;
+    @apply mb-8 text-4xl font-bold uppercase lg:text-5xl;
   }
 
   .site-section__subcaption {
@@ -124,6 +124,10 @@
 .step-forward-section {
   @apply relative bg-cover bg-center bg-no-repeat lg:bg-[url("/img/bg-2.svg")] lg:py-72;
   /* background-position: -24rem; */
+}
+
+.step-forward-section .site-section__caption {
+  @apply normal-case;
 }
 
 .benefits-section {
@@ -247,6 +251,42 @@
 
 .why-section__group-2 > h3 {
   @apply h-full bg-gradient-to-t from-gray-700 to-transparent p-8 text-lg font-bold;
+}
+
+.roadmap-list {
+  @apply flex flex-col gap-4 lg:ml-auto lg:max-w-2xl;
+}
+
+.roadmap-item {
+  @apply relative;
+}
+
+.roadmap-item > .wrapper {
+  @apply flex gap-12;
+}
+
+.roadmap-list__item:last-of-type .line {
+  @apply hidden;
+}
+
+.roadmap-item__content {
+  @apply flex flex-col gap-4 pb-12 lg:pb-48;
+}
+
+.roadmap-item__title {
+  @apply text-2xl font-bold lg:text-4xl;
+}
+
+.roadmap-item__media-cont {
+  @apply flex flex-col items-center gap-4;
+}
+
+.roadmap-item__media-cont > .img-cont {
+  @apply h-12 w-12 lg:h-24 lg:w-24;
+}
+
+.roadmap-item__points {
+  @apply list-disc;
 }
 
 @keyframes stroke {
