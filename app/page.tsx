@@ -1,5 +1,6 @@
 import BenefitsSection from "@/components/BenefitsSection";
 import FeaturesSection from "@/components/FeaturesSection";
+import PartnersSection from "@/components/PartnersSection";
 import RoadmapSection from "@/components/RoadmapSection";
 import SiteHero from "@/components/Site/Hero";
 import StepForwardSection from "@/components/StepForwardSection";
@@ -95,6 +96,25 @@ const Home = () => {
       status: "pending",
     },
   ];
+
+  const partnerList = [
+    {
+      name: "Partner 1",
+    },
+    {
+      name: "Partner 2",
+    },
+    {
+      name: "Partner 3",
+    },
+    {
+      name: "Partner n",
+    },
+    {
+      name: "Partner n+1",
+    },
+  ];
+
   return (
     <main>
       <SiteHero />
@@ -103,6 +123,7 @@ const Home = () => {
       <FeaturesSection featureList={featureList} />
       <WhySection />
       <RoadmapSection roadmapList={roadmapList} />
+      <PartnersSection partnerList={partnerList} />
     </main>
   );
 };
