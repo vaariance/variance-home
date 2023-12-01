@@ -321,7 +321,7 @@
 }
 
 .partners-section .site-section__header {
-  @apply lg:-translate-x-[-28rem] lg:pb-8;
+  @apply pl-[28rem] lg:pb-8;
 }
 
 .partners-list {
