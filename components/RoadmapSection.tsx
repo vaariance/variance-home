@@ -1,4 +1,8 @@
+"use client";
 import Image from "next/image";
+import SiteLogo from "./Site/Logo";
+import { useIsVisible } from "@/hooks/useIsVisible";
+import { createRef, useRef } from "react";
 
 const RoadmapSection = ({
   roadmapList,
@@ -10,6 +14,30 @@ const RoadmapSection = ({
     status: string;
   }[];
 }) => {
+  const listItemRefs = useRef<React.RefObject<HTMLLIElement>[]>(
+    roadmapList.map(() => createRef()),
+  );
+
+  const isVisible1 = useIsVisible(listItemRefs.current[0]);
+  const isVisible2 = useIsVisible(listItemRefs.current[1]);
+  const isVisible3 = useIsVisible(listItemRefs.current[2]);
+  const isVisible4 = useIsVisible(listItemRefs.current[3]);
+
+  const getVisibilty = (index: number) => {
+    switch (index) {
+      case 0:
+        return isVisible1;
+      case 1:
+        return isVisible2;
+      case 2:
+        return isVisible3;
+      case 3:
+        return isVisible4;
+      default:
+        return false;
+    }
+  };
+
   return (
     <section className="site-section roadmap-section">
       <div className="wrapper">
@@ -18,8 +46,14 @@ const RoadmapSection = ({
         </header>
 
         <ul className="roadmap-list">
-          {roadmapList.map((roadmap) => (
-            <li className="roadmap-list__item" key={roadmap.id}>
+          {roadmapList.map((roadmap, index) => (
+            <li
+              className={`roadmap-list__item smooth-animation ${
+                getVisibilty(index) ? "opacity-100" : "opacity-0"
+              }`}
+              key={roadmap.id}
+              ref={listItemRefs.current[index]}
+            >
               <article className="roadmap-item">
                 <div className="wrapper">
                   <div className="roadmap-item__media-cont">
@@ -61,6 +95,7 @@ const RoadmapSection = ({
           ))}
         </ul>
       </div>
+      <SiteLogo />
     </section>
   );
 };

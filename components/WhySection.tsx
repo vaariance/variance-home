@@ -1,9 +1,19 @@
+"use client";
 import Image from "next/image";
+import { useIsVisible } from "@/hooks/useIsVisible";
+import { useRef } from "react";
 
 const WhySection = () => {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isVisible1 = useIsVisible(ref);
   return (
     <section className="site-section why-section">
-      <div className="wrapper">
+      <div
+        ref={ref}
+        className={`wrapper smooth-animation ${
+          isVisible1 ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <div className="why-section__group-1">
           <h2 className="site-section__caption">WHY?</h2>
 
@@ -23,7 +33,7 @@ const WhySection = () => {
           </div>
 
           <div className="why-section__proportion">
-            <h3 className="max-w-xs">
+            <h3>
               A big proportion of the smartphone audience goes to mobile app
               users
             </h3>

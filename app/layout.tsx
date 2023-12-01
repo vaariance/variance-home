@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SiteHeader from "@/components/Site/Header";
-import SiteFooter from "@/components/Site/Footer";
+import { PalleteProvider } from "@/components/Site/Provider";
+import App from "./app";
 
 export const metadata: Metadata = {
   title: "Vaariance",
@@ -25,11 +25,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <SiteHeader />
-        {children}
-        <SiteFooter />
-      </body>
+      <PalleteProvider>
+        <App>{children}</App>
+      </PalleteProvider>
     </html>
   );
 }

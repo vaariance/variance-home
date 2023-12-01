@@ -1,17 +1,28 @@
+"use client";
+import SiteLogo from "./Site/Logo";
+import { useIsVisible } from "@/hooks/useIsVisible";
+import { useRef } from "react";
+
 const StepForwardSection = () => {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isVisible1 = useIsVisible(ref);
+
   return (
     <section className="site-section step-forward-section">
       <div className="site-section__bg" />
-      <div className="wrapper ">
-        {/* <header className="site-section__header">
-        <div className="wrapper"> */}
+      <div
+        ref={ref}
+        className={`wrapper smooth-animation ${
+          isVisible1 ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <h2 className="site-section__caption">A step forward</h2>
         <h2 className="site-section__caption -translate-y-7 lg:mb-32">
           migrating web3 to mobile
         </h2>
-        <div className="text-wrapper gap-12 lg:flex">
+        <div className="text-wrapper gap-12 lg:flex lg:gap-8">
           <p className="site-section__subcaption">
-            Open source account abstraction SDK written in dart that empowers
+            Open source account abstraction SDKs written in dart that empowers
             developers to create mobile-native Web3 applications with ease.
           </p>
           <br />
@@ -21,8 +32,7 @@ const StepForwardSection = () => {
           </p>
         </div>
       </div>
-      {/* </header> */}
-      {/* </div> */}
+      <SiteLogo />
     </section>
   );
 };
