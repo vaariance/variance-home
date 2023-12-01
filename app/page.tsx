@@ -27,7 +27,7 @@ const Home = () => {
       img: "/img/security.svg",
       title: "Security",
       description:
-        "We focus on delivering a seamless mobile experience. Oleur project’s core value is to make Dapps accessible and user-friendly on smartphones, aligning with the increasing trend of mobile usage.",
+        "We focus on delivering a seamless mobile experience. Our project’s core value is to make Dapps accessible and user-friendly on smartphones, aligning with the increasing trend of mobile usage.",
     },
   ];
   const featureList = [

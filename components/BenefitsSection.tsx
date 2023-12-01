@@ -12,6 +12,7 @@ const BenefitsSection = ({
 }) => {
   return (
     <section className="site-section benefits-section">
+      <div className="site-section__bg" />
       <div className="wrapper">
         <ul className="benefit-list">
           {benefitList.map((benefit) => (

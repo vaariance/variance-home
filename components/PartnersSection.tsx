@@ -7,9 +7,10 @@ const PartnersSection = ({
 }) => {
   return (
     <section className="site-section partners-section">
+      <div className="site-section__bg" />
       <div className="wrapper">
         <header className="site-section__header">
-          <h2 className="site-section__caption">Partners</h2>
+          <h2 className="site-section__caption">Integrations</h2>
         </header>
         <ul className="partners-list">
           {partnerList.map((partner) => (

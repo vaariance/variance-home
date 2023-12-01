@@ -23,7 +23,7 @@ const WhySection = () => {
           </div>
 
           <div className="why-section__proportion">
-            <h3>
+            <h3 className="max-w-xs">
               A big proportion of the smartphone audience goes to mobile app
               users
             </h3>

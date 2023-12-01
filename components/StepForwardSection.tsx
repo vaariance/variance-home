@@ -1,11 +1,13 @@
 const StepForwardSection = () => {
   return (
     <section className="site-section step-forward-section">
+      <div className="site-section__bg" />
       <div className="wrapper ">
         {/* <header className="site-section__header">
         <div className="wrapper"> */}
-        <h2 className="site-section__caption lg:mb-32 lg:max-w-sm">
-          A step forward migrating web3 to mobile
+        <h2 className="site-section__caption">A step forward</h2>
+        <h2 className="site-section__caption -translate-y-7 lg:mb-32">
+          migrating web3 to mobile
         </h2>
         <div className="text-wrapper gap-12 lg:flex">
           <p className="site-section__subcaption">

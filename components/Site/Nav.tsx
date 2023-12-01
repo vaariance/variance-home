@@ -4,12 +4,12 @@ const SiteNav = () => {
   const links = [
     {
       type: "external",
-      href: "https://githib.com/",
+      href: "https://github.com/vaariance",
       text: "GitHub",
     },
     {
       type: "internal",
-      href: "/documentation",
+      href: "https://docs.variance.space",
       text: "Documentation",
     },
   ];

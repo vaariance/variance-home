@@ -4,6 +4,7 @@ import SiteNav from "./Nav";
 const SiteFooter = () => {
   return (
     <footer className="site-footer site-section">
+      <div className="site-footer__bg" />
       <div className="wrapper">
         <SiteNav />
         <div className="items">

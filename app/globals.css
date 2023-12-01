@@ -43,7 +43,7 @@
   }
 
   .site-section > .wrapper {
-    @apply mx-auto max-w-6xl;
+    @apply mx-auto max-w-6xl p-4;
   }
 
   .site-section__header {
@@ -51,11 +51,11 @@
   }
 
   .site-section__caption {
-    @apply mb-8 text-4xl font-bold uppercase lg:text-5xl;
+    @apply mb-8 text-4xl font-semibold md:font-bold uppercase max-w-xs md:max-w-sm lg:max-w-lg;
   }
 
   .site-section__subcaption {
-    @apply text-lg lg:text-2xl;
+    @apply text-lg lg:text-2xl font-light max-w-xs md:max-w-sm lg:max-w-[400px];
   }
 
   .site-nav__list {
@@ -75,16 +75,20 @@
   }
 
   .site-header .site-nav {
-    @apply max-lg:hidden;
+    @apply max-lg:hidden pt-8;
   }
 
   .site-hero {
-    @apply relative bg-[url("/img/bg-1.svg")] bg-cover bg-bottom bg-no-repeat;
+    @apply relative pt-0;
     /* background-position: -24rem; */
   }
 
   .site-hero > .wrapper {
     @apply flex h-screen max-h-[80rem] flex-col items-center justify-center text-center;
+  }
+
+  .site-hero .site-hero__bg {
+    @apply absolute inset-0 -z-10 h-full w-full lg:w-[calc(100%-28rem)] bg-cover bg-[url("/img/bg-1.svg")] bg-bottom bg-no-repeat;
   }
 
   .site-hero .site-section__header,
@@ -97,11 +101,15 @@
   }
 
   .site-hero__caption {
-    @apply font-display text-4xl font-black uppercase lg:text-7xl;
+    @apply font-display text-4xl font-black uppercase lg:text-8xl pb-4;
   }
 
   .site-hero__subcaption {
-    @apply font-display text-lg font-semibold uppercase lg:text-2xl;
+    @apply font-display text-lg font-semibold uppercase lg:text-3xl;
+  }
+
+  .site-hero > .wrapper > .img-cont {
+    @apply hidden lg:flex absolute right-[calc(4%+4rem)] bottom-[calc(6%+8rem)];
   }
 
   .site-hero__elements:nth-of-type(1) {
@@ -122,8 +130,12 @@
 }
 
 .step-forward-section {
-  @apply relative bg-cover bg-top bg-no-repeat lg:bg-[url("/img/bg-2.svg")] lg:py-72;
+  @apply relative lg:py-72;
   /* background-position: -24rem; */
+}
+
+.step-forward-section .site-section__bg {
+  @apply absolute inset-0 -z-10 w-full lg:w-[calc(100%-28rem)] bg-cover lg:bg-[url("/img/bg-2.svg")] bg-top bg-no-repeat;
 }
 
 .step-forward-section .site-section__caption {
@@ -131,7 +143,12 @@
 }
 
 .benefits-section {
-  @apply relative bg-cover bg-center bg-no-repeat lg:bg-[url("/img/bg-3.svg")] lg:py-72;
+  @apply relative lg:py-72;
+  /* background-position: -24rem; */
+}
+
+.benefits-section .site-section__bg {
+  @apply absolute inset-0 -z-10 w-full lg:w-[calc(100%-28rem)] bg-cover lg:bg-[url("/img/bg-3.svg")] bg-center bg-no-repeat;
   /* background-position: -24rem; */
 }
 
@@ -144,19 +161,23 @@
 }
 
 .benefit-list__item-img-cont {
-  @apply flex-shrink-0 lg:w-24;
+  @apply flex-shrink-0;
+}
+
+.img-cont > .benefit-list__item-img {
+  @apply h-12 w-12 lg:h-20 lg:w-20
 }
 
 .benefit-list__item-content {
-  @apply flex flex-col gap-2;
+  @apply flex flex-col gap-6;
 }
 
 .benefit-list__item-title {
-  @apply text-2xl font-bold lg:text-3xl;
+  @apply text-3xl font-medium lg:text-4xl;
 }
 
 .benefit-list__item-description {
-  @apply text-lg lg:text-2xl;
+  @apply text-lg lg:text-2xl font-light max-w-xs lg:max-w-lg;
 }
 
 .features-section {
@@ -226,7 +247,7 @@
 }
 
 .why-section .site-section__caption {
-  @apply mb-24;
+  @apply font-display mb-24 font-extrabold text-6xl;
 }
 
 .why-section__group-1 {
@@ -238,7 +259,7 @@
 }
 
 .why-section__proportion > h3 {
-  @apply text-lg font-bold;
+  @apply text-lg md:text-xl font-bold;
 }
 
 .why-section__proportion > p {
@@ -290,8 +311,17 @@
 }
 
 .partners-section {
-  @apply relative bg-cover bg-center bg-no-repeat lg:bg-[url("/img/bg-4.svg")] lg:py-72;
+  @apply relative lg:py-72;
   /* background-position: -24rem; */
+}
+
+.partners-section .site-section__bg {
+  @apply absolute left-auto inset-0 -z-10 w-full lg:w-[calc(100%-28rem)] bg-cover lg:bg-[url("/img/bg-4.svg")] bg-top bg-no-repeat;
+  /* background-position: -24rem; */
+}
+
+.partners-section .site-section__header {
+  @apply lg:-translate-x-[-28rem] lg:pb-8;
 }
 
 .partners-list {
@@ -311,7 +341,12 @@
 }
 
 .site-footer {
-  @apply bg-[url("/img/bg-5.svg")] bg-cover bg-top bg-no-repeat py-64;
+  @apply relative py-64;
+}
+
+.site-footer .site-footer__bg {
+  @apply absolute left-auto inset-0 -z-10 w-full lg:w-[calc(100%-28rem)] bg-cover lg:bg-[url("/img/bg-5.svg")] bg-top bg-no-repeat;
+  
 }
 
 .site-footer > .wrapper > .items {
