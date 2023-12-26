@@ -1,3 +1,8 @@
+"use client";
+
+import { useContext } from "react";
+import { PalleteContext } from "@/components/Site/Context";
+
 const FeaturesSection = ({
   featureList,
 }: {
@@ -6,6 +11,8 @@ const FeaturesSection = ({
     description: string[];
   }[];
 }) => {
+  const { color } = useContext(PalleteContext);
+
   return (
     <section className="site-section features-section">
       <div className="wrapper">
@@ -26,8 +33,12 @@ const FeaturesSection = ({
                     cy="81.1025"
                     r="80.5"
                     transform="rotate(-0.0734336 81.1025 81.1025)"
-                    fill="#5E5E5E"
-                    stroke="white"
+                    fill={`${
+                      color.text == "text-gray-950" ? "#5E5E5E10" : "#5E5E5E"
+                    }`}
+                    stroke={`${
+                      color.text == "text-gray-950" ? "#5E5E5E80" : "white"
+                    }`}
                     strokeDasharray="10 10"
                   />
                 </svg>
@@ -43,11 +54,21 @@ const FeaturesSection = ({
                 >
                   <path
                     d="M0.5 0.5V191.5"
-                    stroke="white"
+                    stroke={`${
+                      color.text == "text-gray-950" ? "#5E5E5E80" : "white"
+                    }`}
                     strokeDasharray="10 10"
                   />
                 </svg>
-                <p>{feature.description[1]}</p>
+                <p
+                  className={`font-bold ${
+                    color.text == "text-gray-950"
+                      ? "text-gray-500"
+                      : " text-gray-100"
+                  }`}
+                >
+                  {feature.description[1]}
+                </p>
               </div>
             </li>
           ))}

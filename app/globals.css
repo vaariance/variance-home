@@ -251,10 +251,6 @@
   @apply text-gray-400;
 }
 
-.feature-list__content > p:last-of-type {
-  @apply font-bold text-gray-100;
-}
-
 .why-section {
   @apply bg-gradient-to-t from-gray-200/10 to-gray-500/10;
 }

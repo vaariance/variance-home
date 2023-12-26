@@ -3,6 +3,8 @@ import Image from "next/image";
 import SiteLogo from "./Site/Logo";
 import { useIsVisible } from "@/hooks/useIsVisible";
 import { createRef, useRef } from "react";
+import { useContext } from "react";
+import { PalleteContext } from "@/components/Site/Context";
 
 const BenefitsSection = ({
   benefitList,
@@ -14,6 +16,8 @@ const BenefitsSection = ({
     description: string;
   }[];
 }) => {
+  const { color } = useContext(PalleteContext);
+
   const listItemRefs = useRef<React.RefObject<HTMLLIElement>[]>(
     benefitList.map(() => createRef()),
   );
@@ -52,7 +56,9 @@ const BenefitsSection = ({
                 <Image
                   src={benefit.img}
                   alt={benefit.title}
-                  className="benefit-list__item-img"
+                  className={`${
+                    color.text == "text-gray-950" ? "invert" : ""
+                  } benefit-list__item-img`}
                   width={64}
                   height={64}
                 />

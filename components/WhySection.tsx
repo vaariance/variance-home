@@ -26,8 +26,8 @@ const WhySection = () => {
                 time.
               </p>
               <p>
-                Web apps account for 29%, while Desktop apps, ssh, others,
-                account for 4%
+                Web apps account for 29%, while Desktop apps and others, account
+                for 4%
               </p>
             </div>
           </div>

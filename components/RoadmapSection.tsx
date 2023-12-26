@@ -3,6 +3,8 @@ import Image from "next/image";
 import SiteLogo from "./Site/Logo";
 import { useIsVisible } from "@/hooks/useIsVisible";
 import { createRef, useRef } from "react";
+import { useContext } from "react";
+import { PalleteContext } from "@/components/Site/Context";
 
 const RoadmapSection = ({
   roadmapList,
@@ -14,6 +16,8 @@ const RoadmapSection = ({
     status: string;
   }[];
 }) => {
+  const { color } = useContext(PalleteContext);
+
   const listItemRefs = useRef<React.RefObject<HTMLLIElement>[]>(
     roadmapList.map(() => createRef()),
   );
@@ -61,6 +65,9 @@ const RoadmapSection = ({
                       <Image
                         src={`/img/${roadmap.id}.svg`}
                         alt={roadmap.title}
+                        className={`${
+                          color.text == "text-gray-950" ? "invert" : ""
+                        }`}
                         width={64}
                         height={64}
                       />

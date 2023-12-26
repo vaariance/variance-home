@@ -9,7 +9,7 @@ const App = ({ children }: { children: React.ReactNode }) => {
   const { color } = useContext(PalleteContext);
 
   return (
-    <body className={`${color.bg}`}>
+    <body className={`${color.bg} ${color.text}`}>
       <SiteHeader />
       {children}
       <SiteFooter />
