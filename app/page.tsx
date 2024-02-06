@@ -27,7 +27,7 @@ const Home = () => {
       img: "/img/security.svg",
       title: "Security",
       description:
-        "We focus on delivering a seamless mobile experience. Our project’s core value is to make Dapps accessible and user-friendly on smartphones, aligning with the increasing trend of mobile usage.",
+        "Enhanced security options for users, by leveraging hardware-based signatures (passkeys), secure storage (Android keystore or IOS keychain) and biometrics/face-id.",
     },
   ];
   const featureList = [
