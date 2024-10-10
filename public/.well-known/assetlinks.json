@@ -11,5 +11,18 @@
         "E7:EF:97:86:1A:E9:35:E1:FF:2B:66:98:A7:16:31:3A:EA:73:45:96:64:07:3D:5D:19:44:EE:C0:35:1A:0C:D2"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.variancedemo",
+      "sha256_cert_fingerprints": [
+        "E7:EF:97:86:1A:E9:35:E1:FF:2B:66:98:A7:16:31:3A:EA:73:45:96:64:07:3D:5D:19:44:EE:C0:35:1A:0C:D2"
+      ]
+    }
   }
 ]
