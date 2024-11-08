@@ -48,5 +48,21 @@
         "8C:6F:23:99:F2:A9:96:85:85:3E:75:35:FB:B8:00:3F:8F:92:70:BF:6B:A1:10:CD:FE:D6:7F:69:20:20:E7:60"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "space.variance.internal",
+      "sha256_cert_fingerprints": [
+        "E7:EF:97:86:1A:E9:35:E1:FF:2B:66:98:A7:16:31:3A:EA:73:45:96:64:07:3D:5D:19:44:EE:C0:35:1A:0C:D2",
+        "8B:FC:C7:E1:BE:1C:BB:CB:B4:FB:65:06:11:98:60:18:FF:70:09:12:1D:46:3F:88:BC:A8:5B:46:9B:E2:A0:0A",
+        "D2:4D:53:EF:2B:A2:22:42:0D:04:A6:DF:17:89:6E:BE:95:3E:CD:6A:C2:7A:41:E0:BE:65:52:C8:0B:B0:0E:55",
+        "28:DF:DA:2A:24:A5:46:74:3A:3F:67:42:B5:27:4B:66:CD:D1:8B:07:0E:89:94:B9:C1:F6:4B:1D:71:CE:7F:41"
+      ]
+    }
   }
 ]
