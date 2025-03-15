@@ -18,12 +18,13 @@ const StepForwardSection = () => {
       >
         <h2 className="site-section__caption">A step forward</h2>
         <h2 className="site-section__caption -translate-y-7 lg:mb-32">
-          migrating web3 to mobile
+          bridging the gap between flutter developers and web3
         </h2>
         <div className="text-wrapper gap-12 lg:flex lg:gap-8">
           <p className="site-section__subcaption">
-            Open source account abstraction SDKs written in dart that empowers
-            developers to create mobile-native Web3 applications with ease.
+            Open source account abstraction developer toolkit written in dart
+            that empowers developers to create mobile-native Web3 applications
+            with ease.
           </p>
           <br />
           <p className="site-section__subcaption">

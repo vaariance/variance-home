@@ -27,7 +27,7 @@ const Home = () => {
       img: "/img/security.svg",
       title: "Security",
       description:
-        "Enhanced security options for users, by leveraging hardware-based signatures (passkeys), secure storage (Android keystore or IOS keychain) and biometrics/face-id.",
+        "Enhanced security options for users, by providing a wide range of account options including safe accounts with passkey signers.",
     },
   ];
   const featureList = [
@@ -76,21 +76,41 @@ const Home = () => {
       status: "completed",
     },
     {
-      title: "Safe Core Utils",
-      id: "safe-core-utils",
+      title: "Smart Accounts",
+      id: "smart-accounts",
       points: [
-        "Safe helpers that enable developers to work with Safe modular accounts.",
-        "Compatibility with wallet provider.",
-        "Gelato as an alternative to 4337 via alt mempool.",
+        "Enable Safe Smart Accounts for consumer apps",
+        "Support for Safe Accounts with passkey signatures",
+        "Support for Alchemy light accounts",
+      ],
+      status: "completed",
+    },
+    {
+      title: "Modular accounts",
+      id: "modular-accounts",
+      points: [
+        "Enable Safe 7579 Accounts for modular apps",
+        "Define a Standard module interface to enable developers contribute to the Modules.",
+        "Add initial Core rhinestone modules.",
       ],
       status: "in-progress",
     },
     {
-      title: "Add-ons",
-      id: "add-ons",
+      title: "Smart EOA",
+      id: "smart-eoa-wallets",
       points: [
-        "Enable smart wallet developers to provide users with a streamlined means of connecting their wallets to Dapps on the web.",
-        "Native Cross-Chain support with CCIP interface.",
+        "Built in Compatibility with EIP-4337",
+        "Fully implemented EIP-7702 Setup, Validation, Execution and Clean-up",
+        "Enable Safe 7702 Accounts",
+        "Align with Security best practices",
+      ],
+      status: "pending",
+    },
+    {
+      title: "Wallet Call API",
+      id: "wallet-capabilities",
+      points: [
+        "Adaptable implementation that enables: wallet_sendCalls, wallet_getCallsStatus, wallet_showCallsStatus and wallet_getCapabilities",
       ],
       status: "pending",
     },
@@ -98,19 +118,24 @@ const Home = () => {
 
   const partnerList = [
     {
-      name: "Partner 1",
+      name: "Fuse Network",
+      id: "fuse-io",
     },
     {
-      name: "Partner 2",
+      name: "Voltage Finance",
+      id: "voltage-finance",
     },
     {
-      name: "Partner 3",
+      name: "LearnWay",
+      id: "learn-way",
     },
     {
-      name: "Partner n",
+      name: "Developer DAO",
+      id: "developer-dao",
     },
     {
-      name: "Partner n+1",
+      name: "Guild Audits",
+      id: "guild-audits",
     },
   ];
 

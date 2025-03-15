@@ -7,7 +7,7 @@ import { useRef } from "react";
 const PartnersSection = ({
   partnerList,
 }: {
-  partnerList: { name: string }[];
+  partnerList: { name: string; id: string }[];
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const isVisible1 = useIsVisible(ref);
@@ -22,7 +22,7 @@ const PartnersSection = ({
         }`}
       >
         <header className="site-section__header">
-          <h2 className="site-section__caption">Integrations</h2>
+          <h2 className="site-section__caption">Ecosystem</h2>
         </header>
         <ul className="partners-list">
           {partnerList.map((partner) => (
@@ -30,10 +30,11 @@ const PartnersSection = ({
               <p className="partners-list__item-title">{partner.name}</p>
               <figure className="img-cont">
                 <Image
-                  src={`/img/partner.svg`}
+                  src={`/img/${partner.id}.svg`}
                   alt={partner.name}
                   width={64}
                   height={64}
+                  className="max-h-16 min-w-16 rounded-lg bg-gray-950 p-1.5"
                 />
               </figure>
             </li>

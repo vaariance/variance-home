@@ -26,6 +26,8 @@ const RoadmapSection = ({
   const isVisible2 = useIsVisible(listItemRefs.current[1]);
   const isVisible3 = useIsVisible(listItemRefs.current[2]);
   const isVisible4 = useIsVisible(listItemRefs.current[3]);
+  const isVisible5 = useIsVisible(listItemRefs.current[4]);
+  const isVisible6 = useIsVisible(listItemRefs.current[5]);
 
   const getVisibilty = (index: number) => {
     switch (index) {
@@ -37,6 +39,10 @@ const RoadmapSection = ({
         return isVisible3;
       case 3:
         return isVisible4;
+      case 4:
+        return isVisible5;
+      case 5:
+        return isVisible6;
       default:
         return false;
     }

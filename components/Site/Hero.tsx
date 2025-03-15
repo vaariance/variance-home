@@ -21,21 +21,23 @@ const SiteHero = () => {
         }`}
       >
         <header className="site-section__header">
-          <h1 className="pb-4">
+          <h1 className="pb-4 text-7xl font-bold">VARIANCE</h1>
+          <p className="site-hero__subcaption inline-flex text-sm">
+            Your
             <Typewriter
               options={{
-                strings: ["variance", "aa ", "v aa ", "v aa riance"],
+                strings: ["mobile", "web3", "flutter"],
                 autoStart: true,
                 loop: true,
                 delay: 100,
                 cursor: "_",
-                wrapperClassName: "site-hero__caption",
-                cursorClassName: "site-hero__caption",
+                wrapperClassName: "site-hero__subcaption text-sm inline ml-1",
+                cursorClassName: "site-hero__subcaption text-sm mr-1",
                 deleteSpeed: 15,
               }}
             />
-          </h1>
-          <p className="site-hero__subcaption">4337 sdk</p>
+            Developer toolkit
+          </p>
         </header>
         <div className="site-hero__elements">
           <span>A c c o u n t</span>
