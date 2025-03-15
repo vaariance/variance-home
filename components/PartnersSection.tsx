@@ -28,7 +28,7 @@ const PartnersSection = ({
           {partnerList.map((partner) => (
             <li className="partners-list__item" key={partner.name}>
               <p className="partners-list__item-title">{partner.name}</p>
-              <figure className="img-cont rounded-lg bg-gray-950 p-1.5">
+              <figure className="rounded-lg bg-gray-950 p-1.5">
                 <Image
                   src={`/img/${partner.id}.svg`}
                   alt={partner.name}
