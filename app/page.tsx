@@ -137,6 +137,22 @@ const Home = () => {
       name: "Guild Audits",
       id: "guild-audits",
     },
+    {
+      name: "third web",
+      id: "third-web",
+    },
+    {
+      name: "pathway",
+      id: "path-way",
+    },
+    {
+      name: "Lisk",
+      id: "lisk-logo",
+    },
+    {
+      name: "optimism",
+      id: "optimism-logo",
+    },
   ];
 
   return (
