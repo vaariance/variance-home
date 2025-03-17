@@ -330,40 +330,6 @@
   @apply absolute left-[calc(4%+8rem)] top-2/3 hidden rotate-90 lg:flex;
 }
 
-.partners-section {
-  @apply relative lg:py-72;
-  /* background-position: -24rem; */
-}
-
-.partners-section .site-section__bg {
-  @apply absolute inset-0 left-auto -z-10 w-full bg-cover bg-center bg-no-repeat lg:w-[calc(100%-35rem)] lg:min-w-[700px] lg:bg-[url("/img/bg-4.svg")];
-  /* background-position: -24rem; */
-}
-
-.partners-section .site-section__header {
-  @apply lg:pb-8 lg:pl-[30rem];
-}
-
-.partners-list {
-  @apply grid grid-cols-2 gap-12 lg:ml-auto lg:max-w-2xl;
-}
-
-.partners-list__item {
-  @apply mx-auto flex w-full max-w-lg flex-col-reverse items-center gap-4;
-}
-
-.partners-list__item:nth-of-type(3) {
-  @apply col-span-2;
-}
-
-.partners-list__item-title {
-  @apply text-sm uppercase;
-}
-
-.partners-section > .site-logo {
-  @apply absolute left-[calc(4%+8rem)] top-1/2 hidden rotate-90 lg:flex;
-}
-
 .site-footer {
   @apply relative py-64;
 }
@@ -391,8 +357,6 @@
 .site-footer .items > p {
   @apply font-bebas text-2xl tracking-widest;
 }
-
-/* Add this to your global CSS or module CSS file */
 
 .partners-star-layout {
   position: relative;
@@ -447,17 +411,9 @@
   white-space: nowrap;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .partners-star-layout {
     max-width: 600px;
-  }
-}
-
-/* For medium-small screens, slightly adjust the layout */
-@media (max-width: 640px) {
-  .partners-star-layout {
-    max-width: 500px;
   }
 
   .partners-list__item {
@@ -465,44 +421,75 @@
   }
 }
 
-/* For very small screens, convert to a grid layout */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .partners-star-layout {
+    position: static;
     aspect-ratio: auto;
     height: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
-    padding: 1rem;
+    padding: 0;
   }
 
   .partners-star-layout__center {
-    position: relative;
-    top: auto;
-    left: auto;
+    position: static;
     transform: none;
     margin-bottom: 1rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    max-width: 200px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .partners-star-layout__surrounding {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    position: static;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
   }
 
-  .partners-list__item {
-    position: relative;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    transform: none !important;
+  .partners-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    gap: 1.5rem;
     width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .partners-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .partners-list__item {
+    position: static;
+    transform: none !important;
+    flex: 0 0 auto;
+    width: 90px;
+    padding: 0.5rem;
   }
 
   .partners-list__item:hover {
     transform: scale(1.05) !important;
+  }
+
+  /* Adjust size of partner titles */
+  .partners-list__item-title {
+    font-size: 0.75rem;
+    max-width: 90px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 380px) {
+  .partners-list__item {
+    width: 80px;
   }
 }
 
