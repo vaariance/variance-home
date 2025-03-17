@@ -40,11 +40,10 @@ const PartnersSection = ({
           <h2 className="site-section__caption">Ecosystem</h2>
         </header>
 
-        <div className="partners-star-layout">
+        <div className="partners-star-layout ">
           {/* Center partner */}
           <div className="partners-star-layout__center">
-            <p className="partners-list__item-title">{centerPartner.name}</p>
-            <figure className="rounded-lg bg-gray-950 p-1.5">
+            <figure className="rounded-2xl bg-gray-950 p-1.5">
               <Image
                 src={`/img/${centerPartner.id}.svg`}
                 alt={centerPartner.name}
@@ -53,18 +52,15 @@ const PartnersSection = ({
                 className="max-h-16 min-w-16"
               />
             </figure>
+            <p className="partners-list__item-title">{centerPartner.name}</p>
           </div>
 
           {isMobile ? (
             <div className="partners-star-layout__surrounding">
-              {chunkArray(surroundingPartners, 4).map((chunk, rowIndex) => (
-                <div key={`row-${rowIndex}`} className="partners-row">
-                  {chunk.map((partner) => (
-                    <div className="partners-list__item" key={partner.name}>
-                      <p className="partners-list__item-title">
-                        {partner.name}
-                      </p>
-                      <figure className="rounded-lg bg-gray-950 p-1.5">
+                <div className="partners-row">
+                  {surroundingPartners.map((partner) => (
+                    <div className="partners-list__item mx-auto" key={partner.name}>
+                      <figure className="rounded-2xl bg-gray-950 p-1.5">
                         <Image
                           src={`/img/${partner.id}.svg`}
                           alt={partner.name}
@@ -73,10 +69,12 @@ const PartnersSection = ({
                           className="max-h-16 min-w-16"
                         />
                       </figure>
+                      <p className="partners-list__item-title">
+                        {partner.name}
+                      </p>
                     </div>
                   ))}
                 </div>
-              ))}
             </div>
           ) : (
             // Desktop layout - star pattern
@@ -87,8 +85,7 @@ const PartnersSection = ({
                   key={partner.name}
                   style={calculatePosition(index, surroundingPartners.length)}
                 >
-                  <p className="partners-list__item-title">{partner.name}</p>
-                  <figure className="rounded-lg bg-gray-950 p-1.5">
+                  <figure className="rounded-2xl bg-gray-950 p-1.5">
                     <Image
                       src={`/img/${partner.id}.svg`}
                       alt={partner.name}
@@ -97,13 +94,13 @@ const PartnersSection = ({
                       className="max-h-16 min-w-16"
                     />
                   </figure>
+                  <p className="partners-list__item-title">{partner.name}</p>
                 </li>
               ))}
             </ul>
           )}
         </div>
       </div>
-      <SiteLogo />
     </section>
   );
 };

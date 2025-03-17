@@ -31,7 +31,7 @@
 
 @layer components {
   .smooth-animation {
-    @apply transition-opacity delay-200 duration-700 ease-in;
+    @apply transition-opacity duration-500 ease-in;
   }
 
   .icon {
@@ -71,15 +71,15 @@
   }
 
   .site-header {
-    @apply fixed top-0 z-10 w-full bg-transparent p-6;
+    @apply fixed top-0 z-10 w-full rounded-b-lg p-6 pt-0 backdrop-blur-md;
   }
 
   .site-header > .wrapper {
-    @apply mx-auto flex max-w-6xl items-center justify-center lg:justify-between;
+    @apply mx-auto flex max-w-6xl items-center justify-center pt-8 lg:justify-between;
   }
 
   .site-header .site-nav {
-    @apply pt-8 max-lg:hidden;
+    @apply max-lg:hidden;
   }
 
   .site-hero {
@@ -454,7 +454,7 @@
 
   .partners-row {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     overflow-x: auto;
     padding: 0.5rem 0;
     gap: 1.5rem;

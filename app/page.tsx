@@ -126,32 +126,33 @@ const Home = () => {
       id: "voltage-finance",
     },
     {
-      name: "LearnWay",
-      id: "learn-way",
+      name: "Safe",
+      id: "safe",
     },
     {
-      name: "Developer DAO",
-      id: "developer-dao",
+      name: "LearnWay",
+      id: "learn-way",
     },
     {
       name: "Guild Audits",
       id: "guild-audits",
     },
     {
-      name: "third web",
-      id: "third-web",
-    },
-    {
-      name: "pathway",
-      id: "path-way",
-    },
-    {
-      name: "Lisk",
-      id: "lisk-logo",
-    },
-    {
-      name: "optimism",
+      name: "Superchain",
       id: "optimism-logo",
+    },
+  
+    {
+      name: "Rhinestone",
+      id: "rhinestone",
+    },
+    {
+      name: "Developer DAO",
+      id: "developer-dao",
+    },
+    {
+      name: "The Pathway",
+      id: "path-way",
     },
   ];
 
