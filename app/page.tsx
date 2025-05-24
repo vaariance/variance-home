@@ -93,18 +93,19 @@ const Home = () => {
         "Define a Standard module interface to enable developers contribute to the Modules.",
         "Add initial Core rhinestone modules.",
       ],
-      status: "in-progress",
+      status: "completed",
     },
     {
       title: "Smart EOA",
       id: "smart-eoa-wallets",
       points: [
-        "Built in Compatibility with EIP-4337",
-        "Fully implemented EIP-7702 Setup, Validation, Execution and Clean-up",
-        "Enable Safe 7702 Accounts",
-        "Align with Security best practices",
+        "Built in Compatibility with EIP-4337.",
+        "Fully implemented EIP-7702 Setup, Validation, Execution and Clean-up.",
+        "Enable Safe 7702 Accounts.",
+        "Align with Security best practices.",
+        "Support entrypoint version 0.8."
       ],
-      status: "pending",
+      status: "in-progress",
     },
     {
       title: "Wallet Call API",
@@ -141,7 +142,7 @@ const Home = () => {
       name: "Superchain",
       id: "optimism-logo",
     },
-  
+
     {
       name: "Rhinestone",
       id: "rhinestone",
