@@ -3,7 +3,8 @@
     "apps": [
       "QHUBYNZ482.com.example.web3Signers",
       "QHUBYNZ482.space.variance.variance-dart",
-      "QHUBYNZ482.space.variance.internal"
+      "QHUBYNZ482.space.variance.internal",
+      "QHUBYNZ482.space.variance.web3-signers"
     ]
   }
 }
