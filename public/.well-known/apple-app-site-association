@@ -1,4 +1,13 @@
 {
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "QHUBYNZ482.com.variance.nearby",
+        "paths": [ "/callback" ]
+      }
+    ]
+  },
   "webcredentials": {
     "apps": [
       "QHUBYNZ482.com.example.web3Signers",
